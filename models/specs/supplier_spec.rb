@@ -2,8 +2,6 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../supplier")
 
-
-
 class TestSupplier < MiniTest::Test
 
   def setup
@@ -19,7 +17,13 @@ class TestSupplier < MiniTest::Test
       })
   end
 
+  def test_name()
+    assert_equal('Lomond', @supplier_1.name)
+  end
 
+  def test_payment_method()
+    assert_equal('card', @supplier_2.payment_method)
+  end
 
 
 end
