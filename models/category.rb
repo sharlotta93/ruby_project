@@ -31,17 +31,17 @@ attr_reader :id
     SqlRunner.run(sql,values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM categories"
+    SqlRunner.run(sql)
+  end
+
   def self.find(id)
     sql = "SELECT * FROM categories
           WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
     return Category.new( results.first )
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM categories"
-    SqlRunner.run(sql)
   end
 
   def self.all()
