@@ -22,8 +22,8 @@ class Supplier
   end
 
   def update()
-    sql = "SELECT * FROM suppliers WHERE id = $1"
-    values = [@id]
+    sql = "UPDATE suppliers SET (name, payment_method) = ($1, $2) WHERE id = $3"
+    values = [@name, @payment_method, @id]
     Sqlrunner.run(sql, values)
   end
 

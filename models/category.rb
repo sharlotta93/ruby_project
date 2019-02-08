@@ -20,8 +20,8 @@ attr_reader :id
   end
 
   def update()
-    sql = "SELECT * FROM categories WHERE id = $1"
-    values = [@id]
+    sql = "UPDATE categories SET name = $1 WHERE id = $2"
+    values = [@name, @id]
     Sqlrunner.run(sql, values)
   end
 

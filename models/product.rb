@@ -29,8 +29,12 @@ class Product
   end
 
   def update()
-    sql = "SELECT * FROM products WHERE id = $1"
-    values = [@id]
+    sql = "UPDATE products SET
+          (name, unit, min_units_required, buying_cost, selling_price, description, category_id, supplier_id)
+          =
+          ($1, $2, $3, $4, $5, $6, $7, $8)
+          WHERE id = $9"
+    values = [@name, @unit, @min_units_required, @buying_cost, @selling_price, @description, @category_id, @supplier_id, @id]
     Sqlrunner.run(sql, values)
   end
 
