@@ -10,7 +10,8 @@ CREATE TABLE categories(
 
 CREATE TABLE suppliers(
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255) NOT NULL
+  name VARCHAR(255) NOT NULL,
+  payment_method VARCHAR(255)
 );
 
 CREATE TABLE products(
@@ -18,9 +19,9 @@ CREATE TABLE products(
   name VARCHAR(255),
   unit VARCHAR(255),
   min_units_required INT,
-  buying_cost INT,
-  selling_price INT,
+  buying_cost FLOAT(20),
+  selling_price FLOAT(20),
   description TEXT,
-  category_id INT8 REFERENCES categories(id),
-  supplier_id INT8 REFERENCES suppliers(id)
+  category_id INT8 REFERENCES categories(id) ON DELETE CASCADE,
+  supplier_id INT8 REFERENCES suppliers(id) ON DELETE CASCADE
 );

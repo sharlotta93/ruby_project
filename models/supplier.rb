@@ -15,40 +15,40 @@ class Supplier
   def save()
     sql = "INSERT INTO suppliers
           (name, payment_method) VALUES ($1, $2)
-          RETURNING id"
+           RETURNING id"
     values = [@name, @payment_method]
-    results = SqlRunner.run(sql, values)
+    results = Sqlrunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
     sql = "SELECT * FROM suppliers WHERE id = $1"
     values = [@id]
-    SqlRunner.run(sql, values)
+    Sqlrunner.run(sql, values)
   end
 
   def delete()
     sql = "DELETE FROM suppliers WHERE id = $1"
     values = [@id]
-    SqlRunner.run(sql,values)
+    Sqlrunner.run(sql,values)
   end
 
   def self.delete_all()
     sql = "DELETE FROM suppliers"
-    SqlRunner.run(sql)
+    Sqlrunner.run(sql)
   end
 
   def self.find(id)
     sql = "SELECT * FROM suppliers
            WHERE id = $1"
     values = [id]
-    results = SqlRunner.run( sql, values )
+    results = Sqlrunner.run( sql, values )
     return Supplier.new( results.first )
   end
 
   def self.all()
     sql = "SELECT * FROM suppliers"
-    result = SqlRunner.run(sql).first
+    result = Sqlrunner.run(sql)
     return result.map{ |seller| Supplier.new(seller)}
   end
 

@@ -15,7 +15,7 @@ class TestProduct < MiniTest::Test
       'buying_cost' => 2,
       'selling_price' => 3.5,
       'description' => 'solid round bar of shampoo',
-      'type_id' => 3,
+      'category_id' => 3,
       'supplier_id' => 2,
       })
   end
