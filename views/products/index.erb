@@ -1,0 +1,20 @@
+<h2>Products</h2>
+
+<p>
+  <a href="/product/new">Add new product</a>
+</p>
+
+<ul>
+  <% for product in @products %>
+  <li>
+  <p><%= product.name %> <%= product.unit %> <%= product.min_units_required %>
+  <%= product.buying_cost %> <%= product.selling_price%> <%= product.description %>
+<%= product.category_id%> <%= product.supplier_id %></p>
+    <p>
+      <form action="/products/<%= product.id %>/delete" method="POST">
+        <input type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>
