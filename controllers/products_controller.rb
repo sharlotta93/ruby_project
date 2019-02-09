@@ -14,7 +14,15 @@ get '/products' do
 end
 
 get '/products/new' do
+  @suppliers = Supplier.all()
+  @categories = Category.all()
   erb(:"products/new")
+end
+
+post '/products' do
+  product = Product.new(params)
+  product.save()
+  redirect to("/products")
 end
 
 get '/products/:id/delete' do
