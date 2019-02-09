@@ -1,0 +1,7 @@
+require( 'sinatra' )
+require( 'sinatra/contrib/all' )
+require( 'pry' )
+require_relative( '../models/category' )
+require_relative( '../models/product' )
+require_relative( '../models/supplier' )
+also_reload( '../models/*' )

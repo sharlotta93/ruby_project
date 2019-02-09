@@ -17,7 +17,7 @@ CREATE TABLE suppliers(
 CREATE TABLE products(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  unit VARCHAR(255),
+  unit INT,
   min_units_required INT,
   buying_cost FLOAT(20),
   selling_price FLOAT(20),

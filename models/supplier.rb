@@ -12,6 +12,17 @@ class Supplier
     @payment_method = seller['payment_method']
   end
 
+  def find_all_products()
+    sql = "SELECT products.*
+           FROM products
+           INNER JOIN suppliers
+           ON products.supplier_id = suppliers.id
+           WHERE suppliers.id = $1"
+    values = [@id]
+    result = Sqlrunner.run(sql, values)
+    return result.map {|product| Product.new(product)}
+  end
+
   def save()
     sql = "INSERT INTO suppliers
           (name, payment_method) VALUES ($1, $2)

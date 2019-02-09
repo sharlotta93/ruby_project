@@ -18,6 +18,21 @@ class Product
     @supplier_id = product['supplier_id'].to_i
   end
 
+  def stock_level()
+    stock_level = 0
+    if @unit == 0
+      stock_level = 'out of stock'
+    elsif
+      @unit <= @min_units_required
+      stock_level = 'low'
+    elsif
+      @unit <= (@min_units_required * 2)
+      stock_level = 'medium'
+    else
+      stock_level = 'high'
+    end
+  end
+
   def save()
     sql = "INSERT INTO products
           (name, unit, min_units_required, buying_cost, selling_price, description, category_id, supplier_id)
@@ -61,6 +76,22 @@ class Product
     sql = "SELECT * FROM products"
     result = Sqlrunner.run(sql)
     return result.map {|products| Product.new(products)}
+  end
+
+  def self.by_supplier(supplier_id)
+    sql = "SELECT * FROM products
+           WHERE supplier_id = $1"
+    values = [supplier_id]
+    result = Sqlrunner.run(sql, values)
+    return result.map { |products| Product.new(products)}
+  end
+
+  def self.by_category(category_id)
+    sql = "SELECT * FROM products
+           WHERE category_id = $1"
+    values = [category_id]
+    result = Sqlrunner.run(sql, values)
+    return result.map { |products| Product.new(products)}
   end
 
 end

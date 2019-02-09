@@ -10,7 +10,7 @@ class TestProduct < MiniTest::Test
     @product_1 = Product.new({
       'id' => 1,
       'name' => 'Solid Shampoo',
-      'unit' => 'each',
+      'unit' => 30,
       'min_units_required' => 10,
       'buying_cost' => 2,
       'selling_price' => 3.5,
@@ -28,6 +28,44 @@ class TestProduct < MiniTest::Test
     assert_equal(2, @product_1.buying_cost)
   end
 
+  def test_stock_level__out_of_stock()
+    product = Product.new({
+      'name' => 'Solid Shampoo',
+      'unit' => 0,
+      'min_units_required' => 7,
+      })
+      result = product.stock_level()
+      assert_equal('out of stock', result)
+  end
 
+  def test_stock_level__low()
+    product = Product.new({
+      'name' => 'Solid Shampoo',
+      'unit' => 7,
+      'min_units_required' => 7,
+      })
+      result = product.stock_level()
+      assert_equal('low', result)
+  end
+
+  def test_stock_level__medium()
+    product = Product.new({
+      'name' => 'Solid Shampoo',
+      'unit' => 13,
+      'min_units_required' => 7,
+      })
+      result = product.stock_level()
+      assert_equal('medium', result)
+  end
+
+  def test_stock_level__high()
+    product = Product.new({
+      'name' => 'Solid Shampoo',
+      'unit' => 25,
+      'min_units_required' => 7,
+      })
+      result = product.stock_level()
+      assert_equal('high', result)
+  end
 
 end
