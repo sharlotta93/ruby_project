@@ -11,6 +11,9 @@
   <%= product.buying_cost %> <%= product.selling_price%> <%= product.description %>
 <%= product.category_id%> <%= product.supplier_id %></p>
     <p>
+      <form action="/products/<%= product.id %>" method="GET">
+        <input type="submit" value="select" />
+      </form>
       <form action="/products/<%= product.id %>/delete" method="POST">
         <input type="submit" value="delete" />
       </form>

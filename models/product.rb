@@ -9,7 +9,7 @@ class Product
   def initialize(product)
     @id = product['id'].to_i if product['id']
     @name = product['name']
-    @unit = product['unit']
+    @unit = product['unit'].to_i
     @min_units_required = product['min_units_required'].to_i
     @buying_cost = product['buying_cost'].to_f
     @selling_price = product['selling_price'].to_f

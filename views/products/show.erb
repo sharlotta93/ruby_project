@@ -1,0 +1,12 @@
+<h2><%= @product.name %> Product</h2>
+
+<p>Supplier: <%= @product.supplier_id %></p>
+<p>Category: <%= @product.category_id %></p>
+<p>Unit: <%= @product.unit %></p>
+<p>Stock level: <%= @product.stock_level() %></p>
+<p>Buying Cost: <%= @product.buying_cost %></p>
+<p>Selling price: <%= @product.selling_price %></p>
+<p>Description: <%= @product.description %></p>
+
+<a href="/products/<%= @product.id %>/edit">Edit</a>
+<form action="/products/<%= @product.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

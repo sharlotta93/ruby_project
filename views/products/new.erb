@@ -15,19 +15,19 @@
     <% end %>
   </select>
 
-  <label for="unit-field">Total units:</label>
-  <input
-  type="number"
-  name="unit"
-  id="unit-field"
-  />
-
   <label for="category-selection">Select a category:</label>
   <select name="category_id" id="category-selection">
     <% @categories.each do |category|%>
     <option value= <%= category.id %>><%=category.name%></option>
     <% end %>
   </select>
+
+  <label for="unit-field">Total units:</label>
+  <input
+  type="number"
+  name="unit"
+  id="unit-field"
+  />
 
   <label for="min-unit-required-field">Minum units required:</label>
   <input
