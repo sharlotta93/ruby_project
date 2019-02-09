@@ -25,6 +25,7 @@ post '/products' do
   redirect to("/products")
 end
 
-get '/products/:id/delete' do
-
+post '/products/:id/delete' do
+  Product.delete(params[:id])
+  redirect to("/products")
 end

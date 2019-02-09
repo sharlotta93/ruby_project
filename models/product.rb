@@ -53,9 +53,9 @@ class Product
     Sqlrunner.run(sql, values)
   end
 
-  def delete()
+  def self.delete(id)
     sql = "DELETE FROM products WHERE id = $1"
-    values = [@id]
+    values = [id]
     Sqlrunner.run(sql,values)
   end
 
