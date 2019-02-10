@@ -1,0 +1,46 @@
+<h2>Edit <%= @product.name %></h2>
+<form method="POST" action="/products/<%= @product.id %>">
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @product.name %>"/>
+
+      <label for="supplier_select">Select Supplier:</label>
+      <select name="supplier_id" id="supplier_select" selected="<%= @product.supplier_id  %>">
+        <% @suppliers.each do |supplier| %>
+          <% if supplier.id == @product.supplier_id %>
+            <option value=<%= supplier.id %> selected><%= supplier.name %></option>
+          <% else %>
+            <option value=<%= supplier.id %>><%= supplier.name %></option>
+          <% end %>
+        <% end %>
+      </select>
+
+      <label for="category_select">Select Category:</label>
+      <select name="category_id" id="category_select" selected="<%= @product.category_id  %>">
+        <% @categories.each do |category| %>
+          <% if category.id == @product.category_id %>
+            <option value=<%= category.id %> selected><%= category.name %></option>
+          <% else %>
+            <option value=<%= category.id %>><%= category.name %></option>
+          <% end %>
+        <% end %>
+      </select>
+
+      <label for="unit">Unit:</label>
+      <input type="number" name="unit" id="unit" value="<%= @product.unit%>"/>
+
+      <label for="min_units_required">Minimum Units Required:</label>
+      <input type="number" name="min_units_required" id="min_units_required" value="<%= @product.min_units_required%>"/>
+
+      <label for="buying_cost">Buying price:</label>
+      <input type="float" name="buying_cost" id="buying_cost" value="<%= @product.buying_cost%>"/>
+
+      <label for="selling_price">Selling price:</label>
+      <input type="float" name="selling_price" id="selling_price" value="<%= @product.selling_price %>"/>
+
+
+
+      <input type="submit" value="Update the Product"/>
+
+
+</form>

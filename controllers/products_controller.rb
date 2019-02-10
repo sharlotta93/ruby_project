@@ -30,6 +30,19 @@ post '/products' do
   redirect to("/products")
 end
 
+get '/products/:id/edit' do
+  @suppliers = Supplier.all()
+  @categories = Category.all()
+  @product = Product.find(params['id'].to_i)
+  erb(:"products/edit")
+end
+
+post '/products/:id' do
+  product = Product.new(params)
+  product.update()
+  redirect to "/products/#{params['id']}"
+end
+
 post '/products/:id/delete' do
   Product.delete(params[:id])
   redirect to("/products")
