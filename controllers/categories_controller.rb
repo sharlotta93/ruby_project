@@ -29,5 +29,10 @@ end
 post '/categories/:id' do
   category = Category.new(params)
   category.update()
-  redirect to "/categories/#{params['id']}"
+  redirect to "/categories"
+end
+
+post '/categories/:id/delete' do
+  Category.delete(params[:id])
+  redirect to("/categories")
 end
