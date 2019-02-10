@@ -1,0 +1,21 @@
+<h2>Categories</h2>
+
+<p>
+  <a href="/categories/new">Add new Category</a>
+</p>
+
+<ul>
+  <% for category in @categories %>
+  <li>
+  <p><%= category.name %></p>
+    <p>
+      <form action="/categories/<%= category.id %>/edit" method="GET">
+        <input type="submit" value="edit" />
+      </form>
+      <form action="/categories/<%= category.id %>/delete" method="POST">
+        <input type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>

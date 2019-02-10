@@ -10,7 +10,7 @@ also_reload( '../models/*' )
 get '/products' do
   @products = Product.all()
   @suppliers = Supplier.all()
-  erb ( :"products/index" )
+  erb( :"products/index" )
 end
 
 get '/products/new' do
