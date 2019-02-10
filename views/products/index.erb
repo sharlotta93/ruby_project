@@ -4,15 +4,17 @@
   <a href="/products/new">Add new product</a>
 </p>
 <p>
-  <label for="sort_by">sort by:</label>
-      <select name="sort_by" id="sort_by">
+  <label for="show">show:</label>
+      <select name="show" id="show">
         <option value="by_supplier">Show all</option>
         <% @suppliers.each do |supplier| %>
           <option value=<%= supplier.id %>><%= supplier.name %></option>
-      <% end %>
-       <form>
-        <input type="submit" value="show" />
-      </form>
+        <% end %>
+
+        <form action="/products/" method="POST">
+          <input type="submit" value="select" />
+        </form>
+
       </select>
 </p>
 
