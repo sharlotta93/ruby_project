@@ -81,9 +81,6 @@ supplier_1.update()
 category_1.name = 'Body Care'
 category_1.update()
 
-m = Product.all()
-n = Category.all()
-o = Supplier.all()
 
 binding.pry
 nil

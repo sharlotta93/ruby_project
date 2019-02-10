@@ -1,0 +1,13 @@
+<h2>Edit <%= @supplier.name %></h2>
+<form method="POST" action="/suppliers/<%= @supplier.id %>">
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @supplier.name %>"/>
+
+      <label for="payment_method">Payment Method:</label>
+      <input type="text" name="payment_method" id="payment_method" value="<%= @supplier.payment_method %>"/>
+
+      <input type="submit" value="Update the Supplier"/>
+
+
+</form>
