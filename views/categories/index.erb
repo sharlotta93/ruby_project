@@ -4,10 +4,12 @@
   <a href="/categories/new">Add new Category</a>
 </p>
 
-<ul>
+<div>
+    <h3>Name</h3>
+  <ul>
   <% for category in @categories %>
   <li>
-  <p><%= category.name %></p>
+    <p><%= category.name %></p>
     <p>
       <form action="/categories/<%= category.id %>/edit" method="GET">
         <input type="submit" value="edit" />

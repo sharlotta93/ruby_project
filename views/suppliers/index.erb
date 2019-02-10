@@ -4,18 +4,25 @@
   <a href="/suppliers/new">Add new Supplier</a>
 </p>
 
-<ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>|</th>
+    <th>Payment Method</th>
+    <th></th>
+  </tr>
   <% for supplier in @suppliers %>
-  <li>
-  <p><%= supplier.name %> <%= supplier.payment_method %></p>
-    <p>
-      <form action="/suppliers/<%= supplier.id %>/edit" method="GET">
+  <tr>
+    <td><%= supplier.name %></td>
+    <td>|</td>
+    <td><%= supplier.payment_method %></td>
+
+    <td><form action="/suppliers/<%= supplier.id %>/edit" method="GET">
         <input type="submit" value="edit" />
-      </form>
-      <form action="/suppliers/<%= supplier.id %>/delete" method="POST">
+      </form><form action="/suppliers/<%= supplier.id %>/delete" method="POST">
         <input type="submit" value="delete" />
       </form>
-    </p>
-  </li>
+    </td>
+  </tr>
   <% end %>
-</ul>
+</table>
