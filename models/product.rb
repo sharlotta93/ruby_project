@@ -33,6 +33,16 @@ class Product
     end
   end
 
+  def supplier()
+    supplier = Supplier.find(@supplier_id)
+    return supplier.name
+  end
+
+  def category()
+    category = Category.find(@category_id)
+    return category.name
+  end
+
   def save()
     sql = "INSERT INTO products
           (name, unit, min_units_required, buying_cost, selling_price, description, category_id, supplier_id)

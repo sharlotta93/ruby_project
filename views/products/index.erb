@@ -9,7 +9,7 @@
   <li>
   <p><%= product.name %> <%= product.unit %> <%= product.min_units_required %>
   <%= product.buying_cost %> <%= product.selling_price%> <%= product.description %>
-  <%= product.category_id%> <%= product.supplier_id %></p>
+  <%= product.category%> <%= product.supplier %></p>
     <p>
       <form action="/products/<%= product.id %>" method="GET">
         <input type="submit" value="select" />
