@@ -5,6 +5,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-blend-mode: lighten;
+  font-family: 'Oswald', sans-serif;
 }
 
 /* navigation bar styling */
@@ -22,7 +23,6 @@ body {
 }
 
 .nav li {
- font-family: 'Oswald', sans-serif;
  font-size: 1.2em;
  line-height: 60px;
  display: inline-block;
@@ -52,6 +52,8 @@ body {
 .table td, th {
  border: 1px solid #ddd;
  padding: 8px;
+ text-align: center;
+ font-family: 'Oswald', sans-serif;
 }
 
 .table tr:nth-child(even){background-color: #f2f2f2;}
