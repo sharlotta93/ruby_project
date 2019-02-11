@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  ;
+}
+
+/* navigation bar styling */
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: right;
+}
+
+.nav li {
+ font-family: 'Oswald', sans-serif;
+ font-size: 1.2em;
+ line-height: 60px;
+ display: inline-block;
+ margin-right: 40px;
+ }
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
