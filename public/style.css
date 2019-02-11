@@ -13,11 +13,23 @@ h2 {
 }
 
 /* add new product styling */
-.add_new {
-  padding-left: 150px;
+.add_new button {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.2em;
   color: white;
+
 }
 
+.add_new a {
+  text-decoration: none;
+  color: black;
+}
+
+/* sort by button on product page */
+.sort_by {
+
+}
 /* navigation bar styling */
 
 .nav {

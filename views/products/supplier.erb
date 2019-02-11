@@ -2,9 +2,8 @@
   <div>
    <p>
      <form action="/products/supplier" method="GET">
-      <label for="show">show:</label>
         <select name="supplier_id" id="show">
-          <option value="by_supplier">Show all</option>
+        <!-- <option value="show_all">Show all</option> -->
           <% @suppliers.each do |supplier| %>
             <option value=<%= supplier.id %>><%= supplier.name %></option>
           <% end %>

@@ -1,17 +1,13 @@
 <h2>Products</h2>
-  <div>
-   <p>
+  <div class="sort_button">
      <form action="/products/supplier" method="GET">
-      <label for="show">show:</label>
         <select name="supplier_id" id="show">
-          <option value="by_supplier">Show all</option>
           <% @suppliers.each do |supplier| %>
             <option value=<%= supplier.id %>><%= supplier.name %></option>
           <% end %>
           <input type="submit" value="select" />
         </form>
       </select>
-   </p>
   </div>
 
   <table align="center" class="table">
@@ -51,9 +47,10 @@
   </tr>
   <% end %>
 </table>
+<br>
 
-<div class="add_new">
+<div align="center" class="add_new">
   <button>
-    <a href="/products/new">Add new product</a>
+    <a href="/products/new">Add New Product</a>
   </button>
 </div>

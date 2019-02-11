@@ -1,23 +1,28 @@
 <h2>Categories</h2>
 
-<p>
-  <a href="/categories/new">Add new Category</a>
-</p>
-
 <div>
-    <h3>Name</h3>
-  <ul>
+  <table align="center" class="table">
+    <tr>
+      <th>Name</th>
+    </tr>
   <% for category in @categories %>
-  <li>
-    <p><%= category.name %></p>
-    <p>
-      <form action="/categories/<%= category.id %>/edit" method="GET">
-        <input type="submit" value="edit" />
-      </form>
-      <form action="/categories/<%= category.id %>/delete" method="POST">
-        <input type="submit" value="delete" />
-      </form>
-    </p>
-  </li>
+    <tr>
+      <td><%= category.name %></td>
+      <td>
+        <form action="/categories/<%= category.id %>/edit" method="GET">
+          <input type="submit" value="edit" />
+        </form>
+        <form action="/categories/<%= category.id %>/delete" method="POST">
+          <input type="submit" value="delete" />
+        </form>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>
+<br>
+
+<div align="center" class="add_new">
+  <button>
+    <a href="/categories/new">Add New</a>
+  </button>
+</div>
