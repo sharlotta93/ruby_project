@@ -6,8 +6,8 @@
             <option value=<%= supplier.id %>><%= supplier.name %></option>
           <% end %>
           <input type="submit" value="select" />
-        </form>
-      </select>
+        </select>
+    </form>
   </div>
 
   <table align="center" class="table">
@@ -21,6 +21,7 @@
       <th>Selling Price</th>
       <th>Description</th>
       <th>Stock Level</th>
+      <th></th>
     </tr>
     <% for product in @products %>
     <tr>

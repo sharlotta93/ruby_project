@@ -1,61 +1,62 @@
-<h2>Add new product</h2>
+<h2>Add New Product</h2>
+  <div class="product_form">
+    <form method="post" action="/products">
+      <label for="name-field">Name:</label>
+      <input
+      type="text"
+      name="name"
+      id="name-field"
+      />
 
-<form method="post" action="/products">
-  <label for="name-field">Name:</label>
-  <input
-  type="text"
-  name="name"
-  id="name-field"
-  />
+      <label for="supplier-selection">Select a supplier:</label>
+        <select name="supplier_id" id="supplier-selection">
+          <% @suppliers.each do |supplier|%>
+          <option value= <%= supplier.id %>><%=supplier.name%></option>
+          <% end %>
+       </select>
 
-  <label for="supplier-selection">Select a supplier:</label>
-  <select name="supplier_id" id="supplier-selection">
-    <% @suppliers.each do |supplier|%>
-    <option value= <%= supplier.id %>><%=supplier.name%></option>
-    <% end %>
-  </select>
+      <label for="category-selection">Select a category:</label>
+        <select name="category_id" id="category-selection">
+          <% @categories.each do |category|%>
+          <option value= <%= category.id %>><%=category.name%></option>
+          <% end %>
+        </select>
 
-  <label for="category-selection">Select a category:</label>
-  <select name="category_id" id="category-selection">
-    <% @categories.each do |category|%>
-    <option value= <%= category.id %>><%=category.name%></option>
-    <% end %>
-  </select>
+      <label for="unit-field">Total units:</label>
+        <input
+        type="number"
+        name="unit"
+        id="unit-field"
+        />
 
-  <label for="unit-field">Total units:</label>
-  <input
-  type="number"
-  name="unit"
-  id="unit-field"
-  />
+      <label for="min-unit-required-field">Minum units required:</label>
+        <input
+        type="number"
+        name="min_units_required"
+        id="min-unit-required-field"
+        />
 
-  <label for="min-unit-required-field">Minum units required:</label>
-  <input
-  type="number"
-  name="min_units_required"
-  id="min-unit-required-field"
-  />
+      <label for="buying-cost-field">Buying cost per unit:</label>
+        <input
+        type="float"
+        name="buying_cost"
+        id="buying-cost-field"
+        />
 
-  <label for="buying-cost-field">Buying cost per unit:</label>
-  <input
-  type="float"
-  name="buying_cost"
-  id="buying-cost-field"
-  />
+      <label for="selling-price-field">Selling price:</label>
+        <input
+        type="float"
+        name="selling_price"
+        id="selling-price-field"
+        />
 
-  <label for="selling-price-field">Selling price:</label>
-  <input
-  type="float"
-  name="selling_price"
-  id="selling-price-field"
-  />
+      <label for="description-field">Product Description:</label>
+        <textarea
+        type="text"
+        name="description"
+        id="description-field"
+        ></textarea>
 
-  <label for="description-field">Product Description:</label>
-  <textarea
-  type="text"
-  name="description"
-  id="description-field"
-  ></textarea>
-
-  <input type="submit" value="add the product">
+    <input type="submit" value="ADD">
+  </div>
 </form>

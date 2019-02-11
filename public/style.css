@@ -4,12 +4,13 @@ body {
   background: url("images/background.jpg");
   height: 100vh;
   background-size: cover;
-  background-blend-mode: lighten;
   font-family: 'Oswald', sans-serif;
 }
+
 h2 {
   color: white;
   text-align: center;
+  font-size: 2.5em;
 }
 
 /* add new product styling */
@@ -27,8 +28,38 @@ h2 {
 }
 
 /* sort by button on product page */
-.sort_by {
 
+input[type=submit] {
+    padding: 2px 10px;
+    background: white;
+    border: 1px solid #ccc;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: black;
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+}
+
+input[type=text]:hover {
+   background-color: grey;
+}
+
+.sort_button {
+  padding: 20px;
+  padding-left: 110px;
+}
+
+.sort_button input [type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#show {
+  padding: 15px;
+  font-size: 1.1em;
 }
 /* navigation bar styling */
 
@@ -69,11 +100,13 @@ h2 {
 }
 
 /* Tables styling*/
+
 .table td, th {
  border: 1px solid #ddd;
  padding: 8px;
  text-align: center;
  font-family: 'Oswald', sans-serif;
+ border-collapse: collapse;
 }
 
 .table tr:nth-child(even){
@@ -95,4 +128,23 @@ padding-bottom: 12px;
 text-align: left;
 background-color: #2ba8a8;
 color: white;
+}
+
+/* add new product form */
+.product_form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  max-height: 100vh;
+  color: white;
+  font-size: 1.5em;
+}
+
+.box {
+  grid-column-start: 2;
+  grid-auto-rows: auto;
+}
+
+.description {
+  grid-area: 5 / 3 / 6 / 4;
 }

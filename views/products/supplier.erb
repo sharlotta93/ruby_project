@@ -1,6 +1,5 @@
 <h2>Products</h2>
-  <div>
-   <p>
+  <div class="sort_button">
      <form action="/products/supplier" method="GET">
         <select name="supplier_id" id="show">
         <!-- <option value="show_all">Show all</option> -->
@@ -8,9 +7,8 @@
             <option value=<%= supplier.id %>><%= supplier.name %></option>
           <% end %>
           <input type="submit" value="select" />
-        </form>
-      </select>
-   </p>
+        </select>
+    </form>
   </div>
 
   <table align="center" class="table">
@@ -24,6 +22,7 @@
       <th>Selling Price</th>
       <th>Description</th>
       <th>Stock Level</th>
+      <th></th>
     </tr>
     <% for product in @products %>
     <tr>
@@ -50,8 +49,8 @@
   </tr>
   <% end %>
 </table>
-
-<div class="add_new">
+<br>
+<div align="center" class="add_new">
   <button>
     <a href="/products/new">Add new product</a>
   </button>
