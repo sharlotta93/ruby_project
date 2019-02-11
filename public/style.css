@@ -49,3 +49,21 @@ body {
 }
 
 /* Tables styling*/
+.table td, th {
+ border: 1px solid #ddd;
+ padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table tr:nth-child(odd){background-color: 	#d2d2d2}
+
+.table  tr:hover {background-color: #9a9a9a;}
+
+.table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}

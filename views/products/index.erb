@@ -18,44 +18,28 @@
       </select>
 </p>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
-    <th></th>
     <th>Category</th>
-    <th></th>
     <th>Supplier</th>
-    <th></th>
     <th>Units</th>
-    <th></th>
     <th>Min Units Required</th>
-    <th></th>
     <th>Buying cost</th>
-    <th></th>
     <th>Selling Price</th>
-    <th></th>
     <th>Description</th>
-    <th></th>
     <th>Stock Level</th>
   </tr>
   <% for product in @products %>
   <tr>
     <td><%= product.name %></td>
-    <td></td>
     <td><%= product.category%></td>
-    <td></td>
     <td><%= product.supplier %></td>
-    <td></td>
     <td><%= product.unit %></td>
-    <td></td>
     <td><%= product.min_units_required %></td>
-    <td></td>
     <td><%= product.buying_cost %></td>
-    <td></td>
     <td><%= product.selling_price%></td>
-    <td></td>
     <td><%= product.description %></td>
-    <td></td>
     <td><%= product.stock_level %></td>
     <td>
       <form action="/products/<%= product.id %>" method="GET">

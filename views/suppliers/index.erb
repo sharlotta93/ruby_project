@@ -4,17 +4,14 @@
   <a href="/suppliers/new">Add new Supplier</a>
 </p>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
-    <th>|</th>
     <th>Payment Method</th>
-    <th></th>
   </tr>
   <% for supplier in @suppliers %>
   <tr>
     <td><%= supplier.name %></td>
-    <td>|</td>
     <td><%= supplier.payment_method %></td>
 
     <td><form action="/suppliers/<%= supplier.id %>/edit" method="GET">
