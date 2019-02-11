@@ -39,7 +39,8 @@
       <input type="float" name="selling_price" id="selling_price" value="<%= @product.selling_price %>"/>
 
       <label for="description">Description:</label>
-      <textarea type="text" name="description" id="description" value="<%= @product.description %>"/>
+      <textarea name="description" id="description" name="<%= @product.description %>">
+        <%= @product.description %> </textarea>
 
 
 
