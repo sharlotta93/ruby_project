@@ -43,6 +43,11 @@ post '/products/:id' do
   redirect to "/products/#{params['id']}"
 end
 
+get '/products/supplier/:id' do
+  @products = Product.by_supplier(params['supplier_id'].to_i)
+  erb(:"products/supplier")
+end
+
 post '/products/:id/delete' do
   Product.delete(params[:id])
   redirect to("/products")
