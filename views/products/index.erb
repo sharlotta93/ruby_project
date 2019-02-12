@@ -53,7 +53,7 @@ end if -->
       <td><%= product.calc_mark_up %></td>
       <td><%= product.description %></td>
       <div class="stock_level">
-        <td id="<%=product.stock_level%>"><%= product.stock_level %></td>
+        <td id="<%=product.stock_level.split.join('_')%>"><%= product.stock_level %></td>
       </div>
       <td>
       <form action="/products/<%= product.id %>" method="GET">

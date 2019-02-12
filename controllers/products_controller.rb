@@ -22,7 +22,7 @@ end
 post '/products' do
   product = Product.new(params)
   product.save()
-  redirect to("/products")
+  redirect to "/products"
 end
 
 get '/products/supplier' do
@@ -46,10 +46,10 @@ end
 post '/products/:id' do
   product = Product.new(params)
   product.update()
-  redirect to "/products/#{params['id']}"
+  redirect to "/products"
 end
 
 post '/products/:id/delete' do
   Product.delete(params[:id])
-  redirect to("/products")
+  redirect to "/products"
 end
