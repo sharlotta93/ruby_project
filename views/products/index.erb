@@ -50,9 +50,11 @@ end if -->
       <td><%= product.min_units_required %></td>
       <td><%= product.buying_cost %></td>
       <td><%= product.selling_price%></td>
-      <th><%= product.calc_mark_up %></td>
+      <td><%= product.calc_mark_up %></td>
       <td><%= product.description %></td>
-      <td><%= product.stock_level %></td>
+      <div class="stock_level">
+        <td id="<%=product.stock_level%>"><%= product.stock_level %></td>
+      </div>
       <td>
       <form action="/products/<%= product.id %>" method="GET">
         <input type="submit" value="select" />

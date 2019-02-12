@@ -18,12 +18,19 @@ h2 {
 .add_new button {
   padding: 10px;
   border-radius: 20px;
+  border: 1px solid #2ba8a8;
   font-size: 1.2em;
   color: white;
   position: absolute;
   bottom: 10%;
   left: 10%;
+}
 
+button:hover {
+  background-color: #2ba8a8;
+  box-shadow: 0px 15px 20px rgba(43,168,168, 0.4);
+  color: #2ba8a8;
+  transform: translateY(-3px);
 }
 
 .add_new a {
@@ -45,8 +52,11 @@ input[type=submit] {
     font-family: 'Oswald', sans-serif;
 }
 
-input[type=text]:hover {
-   background-color: grey;
+input[type=submit]:hover {
+  background-color: #2ba8a8;
+  box-shadow: 0px 15px 20px rgba(43,168,168, 0.4);
+  color: #2ba8a8;
+  transform: translateY(-7px);
 }
 
 .sort_button {
@@ -185,4 +195,20 @@ color: white;
 
 .add_button input {
   margin-left: 20vh;
+}
+
+/* stock level styling */
+#LOW {
+  background-color: #FF5151;
+  opacity: 0.8;
+}
+
+#MEDIUM {
+  background-color: #FFAE19;
+  opacity: 0.9;
+}
+
+#HIGH {
+  background-color: #66B266;
+  opacity: 0.9;
 }

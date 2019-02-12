@@ -19,8 +19,8 @@ CREATE TABLE products(
   name VARCHAR(255),
   unit INT,
   min_units_required INT,
-  buying_cost FLOAT(20),
-  selling_price FLOAT(20),
+  buying_cost FLOAT(3),
+  selling_price FLOAT(3),
   description TEXT,
   category_id INT8 REFERENCES categories(id) ON DELETE CASCADE,
   supplier_id INT8 REFERENCES suppliers(id) ON DELETE CASCADE
