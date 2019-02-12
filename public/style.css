@@ -58,6 +58,10 @@ button:hover {
   border: 1px solid #2ba8a8;
 }
 
+.add {
+  position: absolute;
+  left: 5%;
+}
 
 /* sort by button on product page */
 
