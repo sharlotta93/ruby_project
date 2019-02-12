@@ -34,7 +34,9 @@
       <td><%= product.buying_cost %></td>
       <td><%= product.selling_price%></td>
       <td><%= product.description %></td>
-      <td><%= product.stock_level %></td>
+      <div class="stock_level">
+        <td id="<%=product.stock_level%>"><%= product.stock_level %></td>
+      </div>
       <td>
       <form action="/products/<%= product.id %>" method="GET">
         <input type="submit" value="select" />
@@ -49,9 +51,12 @@
   </tr>
   <% end %>
 </table>
-<br>
+
 <div align="center" class="add_new">
   <button>
     <a href="/products/new">Add new product</a>
   </button>
+</div>
+<div class="go_back">
+  <a href="/products"><i class="fas fa-arrow-left"></i></a>
 </div>
