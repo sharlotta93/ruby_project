@@ -18,6 +18,11 @@ class Product
     @supplier_id = product['supplier_id'].to_i
   end
 
+  def calc_mark_up()
+    mark_up = @selling_price - @buying_cost
+    return mark_up.to_f
+  end
+
   def stock_level()
     stock_level = 0
     if @unit == 0

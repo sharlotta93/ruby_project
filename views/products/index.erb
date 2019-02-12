@@ -10,6 +10,23 @@
     </form>
   </div>
 
+<!-- <ul>
+  <li><a href="?filterView=suppliers"></a>Filter by supplier</li>
+  <li><a href="?filterView=category">Filter by category</a></li>
+</ul>
+<div>
+  filtering form
+</div>
+if filterView = suppliers OR null
+
+  show options for filtering via supplier
+
+elseif filterView = category
+
+  show options for filtering via Category
+
+end if -->
+
   <table align="center" class="table">
     <tr>
       <th>Name</th>
@@ -17,8 +34,9 @@
       <th>Supplier</th>
       <th>Units</th>
       <th>Min Units Required</th>
-      <th>Buying cost</th>
+      <th>Buying Cost</th>
       <th>Selling Price</th>
+      <th>Mark Up</th>
       <th>Description</th>
       <th>Stock Level</th>
       <th></th>
@@ -32,6 +50,7 @@
       <td><%= product.min_units_required %></td>
       <td><%= product.buying_cost %></td>
       <td><%= product.selling_price%></td>
+      <th><%= product.calc_mark_up %></td>
       <td><%= product.description %></td>
       <td><%= product.stock_level %></td>
       <td>
