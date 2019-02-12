@@ -250,5 +250,20 @@ color: white;
 
 /* forms that are responsible for adding and editing new supplier and categories */
 .forms {
+  color: white;
+  font-size: 1.5em;
+  background-color: grey;
+  opacity: 0.9;
+  max-width: 35vw;
+  margin-left: 10vw;
+  padding: 4vh;
+}
 
+.forms input, textarea, select{
+  width : 150px;
+  margin: 5px;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: inherit;
 }
