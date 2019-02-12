@@ -16,14 +16,14 @@ h2 {
 }
 
 /* add new product styling */
-.add_new button {
+ button {
   padding: 10px;
   border-radius: 20px;
   font-size: 1.2em;
   color: white;
   position: absolute;
   bottom: 10%;
-  left: 14%;
+  left: 15%;
 }
 
 button:hover {
@@ -43,7 +43,7 @@ button:hover {
 .go_back {
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  left: 11%;
   font-size: 30px;
   background-color: white;
   border-radius: 50%;
@@ -61,6 +61,17 @@ button:hover {
 .add {
   position: absolute;
   left: 5%;
+}
+
+.edit button {
+font-size: 18px;
+font-weight: bolder;
+padding: 10px;
+left: 45%;
+}
+
+.show {
+  left: 40%;
 }
 
 /* sort by button on product page */
@@ -235,4 +246,9 @@ color: white;
 #HIGH {
   background-color: #66B266;
   opacity: 0.9;
+}
+
+/* forms that are responsible for adding and editing new supplier and categories */
+.forms {
+
 }
