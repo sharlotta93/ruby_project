@@ -18,6 +18,7 @@ CREATE TABLE products(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   unit INT,
+  unit_type VARCHAR(255),
   min_units_required INT,
   buying_cost FLOAT(3),
   selling_price FLOAT(3),

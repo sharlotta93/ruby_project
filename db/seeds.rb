@@ -36,6 +36,7 @@ supplier_2.save()
 product_1 = Product.new({
   'name' => 'Shampoo',
   'unit' => 20,
+  'unit_type' => 'item',
   'min_units_required' => 10,
   'buying_cost' => 2.0,
   'selling_price' => 3.5,
@@ -49,6 +50,7 @@ product_1.save()
 product_2 = Product.new({
   'name' => 'Kidney Beans',
   'unit' => 100,
+  'unit_type' => '100g',
   'min_units_required' => 20,
   'buying_cost' => 1.0,
   'selling_price' => 2.2,
@@ -62,6 +64,7 @@ product_2.save()
 product_3 = Product.new({
   'name' => 'Barley',
   'unit' => 15,
+  'unit_type' => '100g',
   'min_units_required' => 20,
   'buying_cost' => 0.5,
   'selling_price' => 1.2,
