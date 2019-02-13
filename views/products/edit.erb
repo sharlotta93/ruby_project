@@ -2,11 +2,11 @@
  <div class="product_form">
   <form method="POST" action="/products/<%= @product.id %>">
     <div class="box">
-      <label for="name">Name:</label>
+      <label for="name">Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
       <input type="text" name="name" id="name" value="<%= @product.name %>"/>
     </div>
     <div class="box">
-      <label for="supplier_select">Select Supplier:</label>
+      <label for="supplier_select">Select a supplier : &nbsp; &nbsp;</label>
       <select name="supplier_id" id="supplier_select" selected="<%= @product.supplier_id  %>">
         <% @suppliers.each do |supplier| %>
           <% if supplier.id == @product.supplier_id %>
@@ -17,7 +17,7 @@
         <% end %>
       </select>
     <div class="box">
-      <label for="category_select">Select Category:</label>
+      <label for="category_select">Select a category: &nbsp; &nbsp;</label>
       <select name="category_id" id="category_select" selected="<%= @product.category_id  %>">
         <% @categories.each do |category| %>
           <% if category.id == @product.category_id %>
@@ -29,21 +29,21 @@
       </select>
     </div>
     <div class="box">
-      <label for="unit">Unit:</label>
+      <label for="unit">Total units : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
       <input type="number" name="unit" id="unit" value="<%= @product.unit%>"/>
     </div>
     <div class="box">
-      <label for="min_units_required">Minimum Units Required:</label>
+      <label for="min_units_required">Min units required : &nbsp;</label>
       <input type="number" name="min_units_required" id="min_units_required" value="<%= @product.min_units_required%>"/>
     </div>
     <div class='box'>
-      <label for="buying_cost">Buying price:</label>
+      <label for="buying_cost">Buying cost per unit:</label>
       <input type="float" name="buying_cost" id="buying_cost" value="<%= @product.buying_cost%>"/>
     </div>
-      <label for="selling_price">Selling price:</label>
+      <label for="selling_price">Selling price: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
       <input type="float" name="selling_price" id="selling_price" value="<%= @product.selling_price %>"/>
     <div class="description">
-      <label for="description">Description:</label>
+      <label for="description">Product Description:</label>
       <textarea name="description" id="description" name="<%= @product.description %>">
         <%= @product.description %> </textarea>
     </div>
