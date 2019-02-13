@@ -230,18 +230,18 @@ color: white;
 }
 
 .product_form input, textarea, select{
-  width : 130px;
+  width : 150px;
   margin: 5px;
   padding: 2px;
   font-size: 14px;
   font-weight: bolder;
   font-family: inherit;
   display: inline-block;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .description textarea {
-  height: 100px;
+  height: 80px;
   vertical-align: top;
 }
 

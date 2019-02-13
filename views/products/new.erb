@@ -2,7 +2,7 @@
   <div class="product_form">
     <form method="post" action="/products">
       <div class="box">
-        <label for="name-field">Name:</label>
+        <label for="name-field">Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
         <input
         type="text"
         name="name"
@@ -10,7 +10,7 @@
         />
       </div>
       <div class="box">
-        <label for="supplier-selection">Select a supplier:</label>
+        <label for="supplier-selection">Select a supplier : &nbsp; &nbsp;</label>
           <select name="supplier_id" id="supplier-selection">
             <% @suppliers.each do |supplier|%>
             <option value= <%= supplier.id %>><%=supplier.name%></option>
@@ -18,7 +18,7 @@
          </select>
        </div>
        <div class="box">
-        <label for="category-selection">Select a category:</label>
+        <label for="category-selection">Select a category: &nbsp; &nbsp;</label>
           <select name="category_id" id="category-selection">
             <% @categories.each do |category|%>
             <option value= <%= category.id %>><%=category.name%></option>
@@ -26,7 +26,7 @@
           </select>
         </div>
         <div class="box">
-          <label for="unit-field">Total units:</label>
+          <label for="unit-field">Total units : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
             <input
             type="number"
             name="unit"
@@ -34,7 +34,7 @@
             />
         </div>
         <div class="box">
-          <label for="min-unit-required-field">Minum units required:</label>
+          <label for="min-unit-required-field">Min units required : &nbsp;</label>
             <input
             type="number"
             name="min_units_required"
@@ -50,7 +50,7 @@
             />
         </div>
         <div class="box">
-          <label for="selling-price-field">Selling price:</label>
+          <label for="selling-price-field">Selling price: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
             <input
             type="float"
             name="selling_price"
