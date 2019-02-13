@@ -1,9 +1,8 @@
-<h2><%= @product.name %> Product</h2>
+<h2><%= @product.name %></h2>
 <div  class="product_form">
     <p>Supplier: <%= @product.supplier_id %></p>
     <p>Category: <%= @product.category_id %></p>
-    <p>Unit: <%= @product.unit %></p>
-    <p>Unit Type: <%= @product.unit_type %></p>
+    <p>Unit type: <%= @product.unit_type %></p>
     <p>Stock Level: <%= @product.stock_level() %></p>
     <p>Buying Cost: <%= @product.buying_cost %></p>
     <p>Selling Price: <%= @product.selling_price %></p>
