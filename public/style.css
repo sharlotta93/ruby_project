@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("images/background.jpg");
+  background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) ), url("images/background.jpg");
   height: 100vh;
   background-size: cover;
   font-family: 'Oswald', sans-serif;
@@ -197,29 +197,26 @@ color: white;
 
 /* edit and add new product form */
 .product_form {
+  display: inline-block;
   max-height: 100vh;
+  max-width: 60vw;
   color: white;
   font-size: 1.5em;
   background-color: grey;
   opacity: 0.9;
-  max-width: 40vw;
   margin-left: 10vw;
   padding: 4vh;
 }
 
 .product_form input, textarea, select{
-  width : 150px;
+  width : 130px;
   margin: 5px;
   padding: 2px;
   font-size: 14px;
   font-weight: bolder;
   font-family: inherit;
-
-  /* -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-  /*   -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-    /*  -ms-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box; */
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .description textarea {
@@ -275,4 +272,6 @@ color: white;
   opacity: 0.8;
   color: white;
   padding-left: 20px;
+  font-size: 10px;
+  height: 5vh;
 }
