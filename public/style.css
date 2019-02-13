@@ -192,9 +192,16 @@ padding-bottom: 12px;
 text-align: left;
 background-color: #2ba8a8;
 color: white;
-
 }
 
+/* so the scrolling bar is next to the table */
+.supplier {
+  right: 66%;
+}
+
+.type {
+  right: 72%;
+}
 /* edit and add new product form */
 .product_form {
   display: inline-block;
