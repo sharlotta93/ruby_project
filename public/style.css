@@ -6,7 +6,11 @@ body {
   background-size: cover;
   font-family: 'Oswald', sans-serif;
 }
-
+label {
+  color: white;
+  font-family: inherit;
+  font-size: 20px;
+}
 h2 {
   color: white;
   text-align: left;
@@ -215,7 +219,7 @@ color: white;
 /* edit and add new product form */
 .product_form {
   display: inline-block;
-  max-height: 100vh;
+  max-height: 80vh;
   max-width: 60vw;
   min-width: 35vw;
   color: white;
@@ -234,7 +238,6 @@ color: white;
   font-weight: bolder;
   font-family: inherit;
   display: inline-block;
-  /* margin-left: 20px; */
 }
 
 .description textarea {

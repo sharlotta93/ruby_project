@@ -1,6 +1,7 @@
 <h2>Products</h2>
   <div class="sort_button">
      <form action="/products/supplier" method="GET">
+       <label>Sort by:</label>
         <select name="supplier_id" id="show">
           <% @suppliers.each do |supplier| %>
             <option value=<%= supplier.id %>><%= supplier.name %></option>
